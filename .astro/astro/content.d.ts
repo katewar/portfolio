@@ -152,61 +152,19 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"blog": {
-"01-getting-started/index.md": {
-	id: "01-getting-started/index.md";
-  slug: "01-getting-started";
+"01-json-xml-examples/index.md": {
+	id: "01-json-xml-examples/index.md";
+  slug: "01-json-xml-examples";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
-"02-blog-collection/index.md": {
-	id: "02-blog-collection/index.md";
-  slug: "02-blog-collection";
+"02-api-doc-example/index.md": {
+	id: "02-api-doc-example/index.md";
+  slug: "02-api-doc-example";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
-"03-projects-collection/index.md": {
-	id: "03-projects-collection/index.md";
-  slug: "03-projects-collection";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
-"04-work-collection/index.md": {
-	id: "04-work-collection/index.md";
-  slug: "04-work-collection";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
-"05-markdown-syntax/index.md": {
-	id: "05-markdown-syntax/index.md";
-  slug: "05-markdown-syntax";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
-"06-mdx-syntax/index.mdx": {
-	id: "06-mdx-syntax/index.mdx";
-  slug: "06-mdx-syntax";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".mdx"] };
-"07-year-sorting-example/index.md": {
-	id: "07-year-sorting-example/index.md";
-  slug: "07-year-sorting-example";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
-"08-draft-example/index.md": {
-	id: "08-draft-example/index.md";
-  slug: "08-draft-example";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 };
 "projects": {
@@ -215,44 +173,37 @@ declare module 'astro:content' {
   slug: "project-1";
   body: string;
   collection: "projects";
-  data: InferEntrySchema<"projects">
+  data: any
 } & { render(): Render[".md"] };
 "project-2/index.md": {
 	id: "project-2/index.md";
   slug: "project-2";
   body: string;
   collection: "projects";
-  data: InferEntrySchema<"projects">
+  data: any
 } & { render(): Render[".md"] };
 };
 "work": {
-"apple.md": {
-	id: "apple.md";
-  slug: "apple";
+"attabotics.md": {
+	id: "attabotics.md";
+  slug: "attabotics";
   body: string;
   collection: "work";
-  data: InferEntrySchema<"work">
+  data: any
 } & { render(): Render[".md"] };
-"facebook.md": {
-	id: "facebook.md";
-  slug: "facebook";
+"mobiltex.md": {
+	id: "mobiltex.md";
+  slug: "mobiltex";
   body: string;
   collection: "work";
-  data: InferEntrySchema<"work">
+  data: any
 } & { render(): Render[".md"] };
-"google.md": {
-	id: "google.md";
-  slug: "google";
+"sel.md": {
+	id: "sel.md";
+  slug: "sel";
   body: string;
   collection: "work";
-  data: InferEntrySchema<"work">
-} & { render(): Render[".md"] };
-"mcdonalds.md": {
-	id: "mcdonalds.md";
-  slug: "mcdonalds";
-  body: string;
-  collection: "work";
-  data: InferEntrySchema<"work">
+  data: any
 } & { render(): Render[".md"] };
 };
 
@@ -264,5 +215,5 @@ declare module 'astro:content' {
 
 	type AnyEntryMap = ContentEntryMap & DataEntryMap;
 
-	export type ContentConfig = typeof import("../../src/content/config.js");
+	export type ContentConfig = never;
 }
