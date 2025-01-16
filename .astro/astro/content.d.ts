@@ -157,14 +157,14 @@ declare module 'astro:content' {
   slug: "01-json-xml-examples";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "02-api-doc-example/index.md": {
 	id: "02-api-doc-example/index.md";
   slug: "02-api-doc-example";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 };
 "projects": {
@@ -173,7 +173,7 @@ declare module 'astro:content' {
   slug: "01-shelter-app";
   body: string;
   collection: "projects";
-  data: any
+  data: InferEntrySchema<"projects">
 } & { render(): Render[".md"] };
 };
 "work": {
@@ -182,21 +182,21 @@ declare module 'astro:content' {
   slug: "attabotics";
   body: string;
   collection: "work";
-  data: any
+  data: InferEntrySchema<"work">
 } & { render(): Render[".md"] };
 "mobiltex.md": {
 	id: "mobiltex.md";
   slug: "mobiltex";
   body: string;
   collection: "work";
-  data: any
+  data: InferEntrySchema<"work">
 } & { render(): Render[".md"] };
 "sel.md": {
 	id: "sel.md";
   slug: "sel";
   body: string;
   collection: "work";
-  data: any
+  data: InferEntrySchema<"work">
 } & { render(): Render[".md"] };
 };
 
@@ -208,5 +208,5 @@ declare module 'astro:content' {
 
 	type AnyEntryMap = ContentEntryMap & DataEntryMap;
 
-	export type ContentConfig = never;
+	export type ContentConfig = typeof import("../../src/content/config.js");
 }
